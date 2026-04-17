@@ -1,0 +1,13 @@
+Preprocessing script:
+    - analyze_deadlines_model.py  
+        Processes all CSV files corresponding to a given experimental setup
+        (model × GPU type × number of GPUs), computes key metrics (e.g.,
+        deadline satisfaction, throughput), and outputs a summarized file:
+        results_deadline_{model}.csv, where {model} encodes the full experiment
+        configuration.
+
+Figure rendering script:
+    - analyze_deadlines_model.R  
+        Generates all figures for a given experiment from the preprocessed CSV
+        files produced above. The main entry point is the function
+        generate_figs(), which produces publication-ready plots. 

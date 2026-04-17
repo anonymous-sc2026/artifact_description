@@ -1,0 +1,5 @@
+Example for Mistar on 1 GPU A100
+1- generate monotoring traces on a hst with 1 A100 with: xrun_for_perf_model_mistral.pl 1 
+2- if not converged, parse traces with: analyze_monitoring.py
+3- build performance model with: ./interpolator.py
+4- this also display the equivalent of Fig.2   

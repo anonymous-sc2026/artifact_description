@@ -1,0 +1,17 @@
+Main script:
+    - serving_traces.py  # Launches the vLLM server or reuses a running instance;
+                         # executes traces in real time using CLI parameters;
+                         # saves results in CSV format
+
+Dependent scripts:
+    - csv_utils.py       # Manages models and CSV handling
+    - server_adapter.py  # Handles vLLM connection and LoRA adapters
+    - shared_context.py  # Shared memory and context used to communicate
+                         # between threads and with the vLLM server
+                         # Set the absolute path to the directory containing the performance_model
+                         # folder in the `prefix_dir` variable (line 3)
+                         
+Experiment scripts example:
+    - xrun_sigma_xp.sh   # Tests robustness to prediction errors on output tokens
+                         # (used to generate Fig. 8)
+    - xrun_a100_1.pl     # Runs experiments on A100 GPUs with the Mistral model
